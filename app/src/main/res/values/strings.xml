@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CovidTracker</string>
     <string name="hello_world">Hello World</string>
+    <string name="button">Button</string>
+    <string name="string_button">Launch Detail Activity</string>
+    <string name="button2">Button</string>
+    <string name="textview">TextView</string>
 </resources>
