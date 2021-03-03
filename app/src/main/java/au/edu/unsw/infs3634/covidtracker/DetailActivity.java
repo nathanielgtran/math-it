@@ -39,7 +39,7 @@ public class DetailActivity extends AppCompatActivity {
         mSearch = findViewById(R.id.bSearch);
 
         Intent intent = getIntent();
-        String id = getIntent().getStringExtra(INTENT_MESSAGE);
+        String id = intent.getStringExtra(INTENT_MESSAGE);
 
         Country country = Country.getCountry(id);
         if(country != null) {
