@@ -18,14 +18,13 @@ public class MainActivity extends AppCompatActivity {
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    launchDetailActivity();
+                    launchDetailActivity("40735414-f500-4ba6-a05f-375fb7e93db8");
             }
-
         });
     }
-    public void launchDetailActivity() {
-        Intent detailIntent = new Intent (MainActivity.this, DetailActivity.class);
-        detailIntent.putExtra("testData", "testValue");
-        startActivity(detailIntent);
+    public void launchDetailActivity(String message) {
+        Intent intent = new Intent (MainActivity.this, DetailActivity.class);
+        intent.putExtra(DetailActivity.INTENT_MESSAGE, message);
+        startActivity(intent);
     }
 }

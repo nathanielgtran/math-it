@@ -11,31 +11,57 @@ import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
 
+    public static final String INTENT_MESSAGE = "au.edu.unsw.infs3634.covidtracker.intent_message";
+    ;
+
+    private TextView mCountry ;
+    private TextView  mNewCases;
+    private TextView  mTotalCases;
+    private TextView  mNewDeaths;
+    private TextView  mTotalDeaths;
+    private TextView  mNewRecovered;
+    private TextView  mTotalRecovered;
+    private Button  mSearch;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        String passedIntentString = getIntent().getStringExtra("testData");
+        mCountry = findViewById(R.id.tvCountry);
+        mNewCases = findViewById(R.id.tvNewCasesDesc);
+        mTotalCases = findViewById(R.id.tvTotalCasesDesc);
+        mNewDeaths = findViewById(R.id.tvNewCasesDesc);
+        mTotalDeaths = findViewById(R.id.tvTotalDeathsDesc);
+        mNewRecovered = findViewById(R.id.tvNewRecoverdDesc);
+        mTotalCases = findViewById(R.id.tvTotalCases);
+        mTotalRecovered = findViewById(R.id.tvTotalRecovered);
+        mSearch = findViewById(R.id.bSearch);
 
-        TextView textView = findViewById(R.id.textView2);
-        textView.setText(passedIntentString);
+        Intent intent = getIntent();
+        String id = getIntent().getStringExtra(INTENT_MESSAGE);
 
-        Button button2 = (Button) findViewById(R.id.button2);
+        Country country = Country.getCountry(id);
+        if(country != null) {
+            setTitle(country.getCountryCode());
+            mCountry.setText(country.getCountry());
+            mNewCases.setText(country.getCountry());
+            mTotalCases.setText(country.getCountry());
+            mNewDeaths.setText(country.getCountry());
+            mTotalDeaths.setText(country.getCountry());
+            mNewRecovered.setText(country.getCountry());
+            mTotalRecovered.setText(country.getCountry());
+            mSearch.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){ searchCountryYT(country.getCountry());}
+            });
+        }
 
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openYoutubeVideo();
-            }
-
-        });
     }
-
-    public void openYoutubeVideo(){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO"));
+    private void searchCountryYT(String country) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=covid " + country));
         startActivity(intent);
+
     }
 }
 
