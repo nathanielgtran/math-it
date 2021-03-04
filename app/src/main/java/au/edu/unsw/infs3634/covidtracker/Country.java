@@ -139,6 +139,7 @@ public class Country {
         ArrayList<Country> countries = Country.getCountries();
         for(final Country country: countries){
             if (country.getId().equals(id)){
+                return country;
             }
         }
         return null;
