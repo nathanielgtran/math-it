@@ -2,161 +2,153 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".DetailActivity">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="76dp"
-        android:text="@string/button2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
-        android:contentDescription="TODO"
+        android:layout_width="413dp"
+        android:layout_height="733dp"
+        android:alpha=".80"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/box_gray_black" />
 
-    <TextView
-        android:id="@+id/tvNewCase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="16dp"
-        android:text="New Cases"
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="171dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="108dp"
+        android:text="@string/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textColor="#151852"
+        app:backgroundTint="#FFFFFF" />
 
     <TextView
-        android:id="@+id/tvNewDeaths"
+        android:id="@+id/tvOperator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="New Deaths"
-        app:layout_constraintStart_toStartOf="@+id/tvTotalCases"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalCases" />
+        android:layout_marginBottom="84dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="+" />
 
     <TextView
-        android:id="@+id/tvTotalDeaths"
+        android:id="@+id/tvNum1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Total Deaths"
-        app:layout_constraintStart_toStartOf="@+id/tvNewDeaths"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewDeaths" />
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_horizontal"
+        android:text="@string/_2"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOperator"
+        app:layout_constraintEnd_toStartOf="@+id/tvOperator" />
 
     <TextView
-        android:id="@+id/tvNewRecoverd"
+        android:id="@+id/tvNum2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="New recoverd"
-        app:layout_constraintStart_toStartOf="@+id/tvTotalDeaths"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalDeaths" />
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center_horizontal"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOperator"
+        app:layout_constraintStart_toEndOf="@+id/tvOperator" />
 
     <TextView
-        android:id="@+id/tvTotalRecovered"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Total recovered"
-        app:layout_constraintStart_toStartOf="@+id/tvNewRecoverd"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewRecoverd" />
-
-    <TextView
-        android:id="@+id/tvTotalCases"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Total Cases"
-        app:layout_constraintStart_toStartOf="@+id/tvNewCase"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewCase" />
-
-    <TextView
-        android:id="@+id/tvNewCasesDesc"
+        android:id="@+id/equals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="164dp"
-        app:layout_constraintStart_toEndOf="@+id/tvNewCase"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="292dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/equals"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvAnswer"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/tvAnswer"
+        android:layout_width="153dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="148dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/roboto"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="5"
+        android:textColor="#FFFFFF"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/imageView"></EditText>
 
     <TextView
-        android:id="@+id/tvTotalDeathsDesc"
+        android:id="@+id/tvOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/tvNewDeathsDesc"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewDeathsDesc" />
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvNewRecoverdDesc"
+        android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/tvTotalDeathsDesc"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalDeathsDesc" />
+        android:layout_marginBottom="60dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tvTotalRecoverdDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/tvNewRecoverdDesc"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewRecoverdDesc" />
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="262dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvOperator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/bSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Search"
-        app:layout_constraintStart_toStartOf="@+id/tvTotalRecovered"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalRecovered" />
-
-    <TextView
-        android:id="@+id/tvTotalCasesDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/tvNewCasesDesc"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewCasesDesc" />
-
-    <TextView
-        android:id="@+id/tvNewDeathsDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/tvTotalCasesDesc"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalCasesDesc" />
-
-    <TextView
-        android:id="@+id/tvCountry"
-        android:layout_width="191dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvNewCasesDesc"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

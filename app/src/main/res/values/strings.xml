@@ -5,4 +5,11 @@
     <string name="string_button">Launch Detail Activity</string>
     <string name="button2">Button</string>
     <string name="textview">TextView</string>
+    <string name="tvStart">Start!</string>
+    <string name="mathit">MATHIT</string>
+    <string name="todo">TODO</string>
+    <string name="check">Check</string>
+    <string name="_2">2</string>
+    <string name="black_bar">black bar</string>
+    <string name="equals">=</string>
 </resources>

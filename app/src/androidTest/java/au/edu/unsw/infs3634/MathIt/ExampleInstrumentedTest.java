@@ -1,4 +1,4 @@
-package au.edu.unsw.infs3634.covidtracker;
+package au.edu.unsw.infs3634.MathIt;
 
 import android.content.Context;
 
